@@ -18,9 +18,13 @@ Refer to the [How to set up iCloud Container and enable the capability](#how-to-
 ### Get instance
 
 ```dart
-final cloudHelper = await CloudHelper.create('iCloudContainerId');
+final cloudHelper = await CloudHelper.create('iCloudContainerId','databaseType');
 ```
-
+databases types
+```
+A : public database
+B : private database
+```
 ### Get files from iCloud
 
 ```dart

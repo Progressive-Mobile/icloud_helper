@@ -60,7 +60,7 @@ class _MyAppState extends State<MyApp> {
             ),
             ElevatedButton(
               onPressed: () async {
-                cloudHelper ??= await CloudHelper.create(_containerId);
+                cloudHelper ??= await CloudHelper.create(_containerId, "A");
                 try {
                   final a = await cloudHelper?.getAllRecords(
                     type: 'Seed',
@@ -76,7 +76,7 @@ class _MyAppState extends State<MyApp> {
             ),
             ElevatedButton(
               onPressed: () async {
-                cloudHelper ??= await CloudHelper.create(_containerId);
+                cloudHelper ??= await CloudHelper.create(_containerId, "");
                 cloudHelper
                     ?.deleteRecord(
                       id: _idController.text,

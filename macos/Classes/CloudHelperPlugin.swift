@@ -57,7 +57,7 @@ public class CloudHelperPlugin: NSObject, FlutterPlugin {
             result(FlutterError.init(code: "ARGUMENT_ERROR", message: "Required arguments are not provided", details: nil))
             return
         }
-        
+
         let recordId = CKRecord.ID(recordName: id)
         let newRecord = CKRecord(recordType: type, recordID: recordId)
         newRecord["data"] = data
